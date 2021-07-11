@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [UI Tests]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="FirstTest(failed)">
+    <classes>
+      <class name="David.Flux.LoginTeamLeadTest">
+        <methods>
+          <include name="loginAsTeamLead"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.LoginTeamLeadTest -->
+    </classes>
+  </test> <!-- FirstTest(failed) -->
+</suite> <!-- Failed suite [UI Tests] -->

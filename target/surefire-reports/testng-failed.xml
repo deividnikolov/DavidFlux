@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test thread-count="5" name="Command line test(failed)" verbose="0">
+    <classes>
+      <class name="David.Flux.LoginAdminTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="LoginAsAnAdmin"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.LoginAdminTest -->
+      <class name="David.Flux.DeleteNewTeamDepartmentsTest">
+        <methods>
+          <include name="deleteTheNewTeamInDepartments"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.DeleteNewTeamDepartmentsTest -->
+      <class name="David.Flux.LogoutAdminTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="logoutAsAnAdmin"/>
+        </methods>
+      </class> <!-- David.Flux.LogoutAdminTest -->
+      <class name="David.Flux.AddTaskAsAdminTest">
+        <methods>
+          <include name="addATaskAsAnAdmin"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.AddTaskAsAdminTest -->
+      <class name="David.Flux.LoginTeamLeadTest">
+        <methods>
+          <include name="loginAsTeamLead"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.LoginTeamLeadTest -->
+      <class name="David.Flux.CreateTaskAsAdminTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createTaskAsAnAdmin"/>
+        </methods>
+      </class> <!-- David.Flux.CreateTaskAsAdminTest -->
+      <class name="David.Flux.LoginAdminNegativeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="negativeLoginAsAnAdmin"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.LoginAdminNegativeTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

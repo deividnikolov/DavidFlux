@@ -1,0 +1,9 @@
+David\Flux\LoginTeamLeadTest.class
+David\Flux\CreateTaskAsAdminTest.class
+David\Flux\AddTaskAsAdminTest.class
+David\Flux\LogoutAdminTest.class
+David\Flux\LoginAdminTest.class
+David\Flux\Browser.class
+David\Flux\AddNewTeamDepartmentsTest.class
+David\Flux\LoginAdminNegativeTest.class
+David\Flux\DeleteNewTeamDepartmentsTest.class

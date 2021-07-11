@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [FluxDay Tests]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Flux Day(failed)">
+    <classes>
+      <class name="David.Flux.CreateNewOkrTest">
+        <methods>
+          <include name="createTheNewOkrForAnAdminUser"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- David.Flux.CreateNewOkrTest -->
+    </classes>
+  </test> <!-- Flux Day(failed) -->
+</suite> <!-- Failed suite [FluxDay Tests] -->
