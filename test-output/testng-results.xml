@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="22" total="33" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-10T18:19:58 EEST" name="Default suite" finished-at="2021-07-10T18:20:03 EEST" duration-ms="4433">
+  <suite started-at="2021-07-11T16:41:09 EEST" name="FluxDay Tests" finished-at="2021-07-11T16:41:46 EEST" duration-ms="37122">
     <groups>
     </groups>
-    <test started-at="2021-07-10T18:19:58 EEST" name="Default test" finished-at="2021-07-10T18:20:03 EEST" duration-ms="4433">
-      <class name="David.Flux.AddNewTeamDepartmentsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:David.Flux.AddNewTeamDepartmentsTest@19bb07ed]" started-at="2021-07-10T18:19:53 EEST" name="setUp" finished-at="2021-07-10T18:19:58 EEST" duration-ms="5281" status="PASS">
+    <test started-at="2021-07-11T16:41:09 EEST" name="Flux Day" finished-at="2021-07-11T16:41:46 EEST" duration-ms="37122">
+      <class name="David.Flux.LogoutAdminTest">
+        <test-method signature="logoutAsAnAdmin()[pri:0, instance:David.Flux.LogoutAdminTest@1817d444]" started-at="2021-07-11T16:41:25 EEST" name="logoutAsAnAdmin" finished-at="2021-07-11T16:41:27 EEST" duration-ms="2412" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addNewTeamInDepartments()[pri:0, instance:David.Flux.AddNewTeamDepartmentsTest@19bb07ed]" started-at="2021-07-10T18:19:58 EEST" name="addNewTeamInDepartments" finished-at="2021-07-10T18:20:03 EEST" duration-ms="4399" status="PASS">
+        </test-method> <!-- logoutAsAnAdmin -->
+      </class> <!-- David.Flux.LogoutAdminTest -->
+      <class name="David.Flux.LoginFirstEmployeeTest">
+        <test-method signature="loginAsFirstEmployee()[pri:0, instance:David.Flux.LoginFirstEmployeeTest@7a69b07]" started-at="2021-07-11T16:41:09 EEST" name="loginAsFirstEmployee" finished-at="2021-07-11T16:41:12 EEST" duration-ms="2404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsFirstEmployee -->
+      </class> <!-- David.Flux.LoginFirstEmployeeTest -->
+      <class name="David.Flux.LoginSecondEmployeeTest">
+        <test-method signature="loginAsSecondEmployee()[pri:0, instance:David.Flux.LoginSecondEmployeeTest@5e82df6a]" started-at="2021-07-11T16:41:12 EEST" name="loginAsSecondEmployee" finished-at="2021-07-11T16:41:14 EEST" duration-ms="2144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsSecondEmployee -->
+      </class> <!-- David.Flux.LoginSecondEmployeeTest -->
+      <class name="David.Flux.CreateNewOkrTest">
+        <test-method signature="createTheNewOkrForAnAdminUser()[pri:0, instance:David.Flux.CreateNewOkrTest@4facf68f]" started-at="2021-07-11T16:41:41 EEST" name="createTheNewOkrForAnAdminUser" finished-at="2021-07-11T16:41:46 EEST" duration-ms="5627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTheNewOkrForAnAdminUser -->
+      </class> <!-- David.Flux.CreateNewOkrTest -->
+      <class name="David.Flux.LoginAdminNegativeTest">
+        <test-method signature="unsuccessfulLoginAsAnAdmin()[pri:0, instance:David.Flux.LoginAdminNegativeTest@6ca8564a]" started-at="2021-07-11T16:41:27 EEST" name="unsuccessfulLoginAsAnAdmin" finished-at="2021-07-11T16:41:28 EEST" duration-ms="730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unsuccessfulLoginAsAnAdmin -->
+      </class> <!-- David.Flux.LoginAdminNegativeTest -->
+      <class name="David.Flux.AddTaskAsAdminTest">
+        <test-method signature="addATaskAsAnAdmin()[pri:0, instance:David.Flux.AddTaskAsAdminTest@636be97c]" started-at="2021-07-11T16:41:16 EEST" name="addATaskAsAnAdmin" finished-at="2021-07-11T16:41:20 EEST" duration-ms="3987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addATaskAsAnAdmin -->
+      </class> <!-- David.Flux.AddTaskAsAdminTest -->
+      <class name="David.Flux.AddNewTeamDepartmentsTest">
+        <test-method signature="addNewTeamInDepartments()[pri:0, instance:David.Flux.AddNewTeamDepartmentsTest@3911c2a7]" started-at="2021-07-11T16:41:31 EEST" name="addNewTeamInDepartments" finished-at="2021-07-11T16:41:35 EEST" duration-ms="4609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewTeamInDepartments -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:David.Flux.AddNewTeamDepartmentsTest@19bb07ed]" started-at="2021-07-10T18:20:03 EEST" name="tearDown" finished-at="2021-07-10T18:20:03 EEST" duration-ms="707" status="PASS">
+      </class> <!-- David.Flux.AddNewTeamDepartmentsTest -->
+      <class name="David.Flux.LoginAdminTest">
+        <test-method signature="loginAsAnAdmin()[pri:0, instance:David.Flux.LoginAdminTest@3f197a46]" started-at="2021-07-11T16:41:14 EEST" name="loginAsAnAdmin" finished-at="2021-07-11T16:41:16 EEST" duration-ms="2419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsAnAdmin -->
+      </class> <!-- David.Flux.LoginAdminTest -->
+      <class name="David.Flux.CreateTaskAsAdminTest">
+        <test-method signature="createTaskAsAnAdmin()[pri:0, instance:David.Flux.CreateTaskAsAdminTest@50a638b5]" started-at="2021-07-11T16:41:20 EEST" name="createTaskAsAnAdmin" finished-at="2021-07-11T16:41:25 EEST" duration-ms="4498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTaskAsAnAdmin -->
+      </class> <!-- David.Flux.CreateTaskAsAdminTest -->
+      <class name="David.Flux.Browser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:David.Flux.Browser@57c758ac]" started-at="2021-07-11T16:41:02 EEST" name="setUp" finished-at="2021-07-11T16:41:09 EEST" duration-ms="6666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:David.Flux.Browser@57c758ac]" started-at="2021-07-11T16:41:46 EEST" name="tearDown" finished-at="2021-07-11T16:41:47 EEST" duration-ms="649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- David.Flux.AddNewTeamDepartmentsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- David.Flux.Browser -->
+      <class name="David.Flux.DeleteNewTeamDepartmentsTest">
+        <test-method signature="deleteTheNewTeamInDepartments()[pri:0, instance:David.Flux.DeleteNewTeamDepartmentsTest@4ac3c60d]" started-at="2021-07-11T16:41:35 EEST" name="deleteTheNewTeamInDepartments" finished-at="2021-07-11T16:41:41 EEST" duration-ms="5120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTheNewTeamInDepartments -->
+      </class> <!-- David.Flux.DeleteNewTeamDepartmentsTest -->
+      <class name="David.Flux.LoginTeamLeadTest">
+        <test-method signature="loginAsTeamLead()[pri:0, instance:David.Flux.LoginTeamLeadTest@1725dc0f]" started-at="2021-07-11T16:41:28 EEST" name="loginAsTeamLead" finished-at="2021-07-11T16:41:31 EEST" duration-ms="3115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsTeamLead -->
+      </class> <!-- David.Flux.LoginTeamLeadTest -->
+    </test> <!-- Flux Day -->
+  </suite> <!-- FluxDay Tests -->
 </testng-results>
