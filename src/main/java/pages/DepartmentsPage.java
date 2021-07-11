@@ -48,7 +48,7 @@ public class DepartmentsPage {
 		driver.findElement(deleteTheTask).click();		
 	}	
 	// Add the new team
-	public void addNewTeamDescriptionPage(String name, String code, String description) {
+	public void addTheNewTeam(String name, String code, String description) {
 		this.setTheTeamName(name);
 		this.setTheTeamCode(code);
 		this.setTheTeamDescription(description);

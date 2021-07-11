@@ -26,7 +26,7 @@ public class DeleteNewTeamDepartmentsTest extends Browser {
 		Browser.home.clickOnDepartmentsButton();
 		
 		Browser.departments.clickOnNewTeamButton();
-		Browser.departments.addNewTeamDescriptionPage("Name", "Code", "Description");
+		Browser.departments.addTheNewTeam("Name", "Code", "Description");
 		
 		Browser.departments.clickOnTheNut();
 		Browser.departments.deleteTheTaskTeam();	

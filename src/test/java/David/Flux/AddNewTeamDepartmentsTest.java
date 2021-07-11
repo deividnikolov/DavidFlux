@@ -30,7 +30,7 @@ public class AddNewTeamDepartmentsTest extends Browser {
 		Browser.home.clickOnDepartmentsButton();
 		Browser.departments.clickOnNewTeamButton();
 		
-		Browser.departments.addNewTeamDescriptionPage("Name","Code","Description");
+		Browser.departments.addTheNewTeam("Name","Code","Description");
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 		Browser.home.clickOnLogoutButton();
 	}
