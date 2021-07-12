@@ -16,31 +16,32 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	// Set the email address
+	//Set the email address
 	public void setEmailAdrress(String mailAdrress) {
 		driver.findElement(email).sendKeys(mailAdrress);
 	}
 
-	// Set the password
+	//Set the password
 	public void setPassword(String pass) {
 		driver.findElement(password).sendKeys(pass);
 	}
 
-	// Click on login button
+	//Click on login button
 	public void clickOnLoginButton() {
 		driver.findElement(loginButton).click();
 	}
 
-	// Login to fluxDay
+	//Login to fluxDay
 	public void loginToFluxDay(String mailAdrress, String pass) {
 		this.setEmailAdrress(mailAdrress);
 		this.setPassword(pass);
 		this.clickOnLoginButton();
 	}
 
-	// Clear the user name text field
+	//Clear the user name text field
 	public void clearTextField() {
 		driver.findElement(clearTextField).clear();
+		
+		
 	}
-
 }

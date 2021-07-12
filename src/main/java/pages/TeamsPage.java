@@ -14,8 +14,10 @@ public class TeamsPage {
 		this.driver = driver;
 	}
 
-	// Click on add task button
+	//Click on add task button
 	public void clickOnAddTaskButton() {
 		driver.findElement(addTaskButton).click();
+		
+		
 	}
 }

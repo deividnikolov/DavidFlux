@@ -17,22 +17,22 @@ public class HomePage {
 		this.driver = driver;
 	}
 
-	// Click the departments button
+	//Click the departments button
 	public void clickOnDepartmentsButton() {
 		driver.findElement(departmentsButton).click();
 	}
 
-	// Click the team button
+	//Click the team button
 	public void clickOnTeamButton() {
 		driver.findElement(teamButton).click();
 	}
 
-	// Click the logout button
+	//Click the logout button
 	public void clickOnLogoutButton() {
 		driver.findElement(clickOnLogoutButton).click();
 	}
 
-	// Click the OKR button
+	//Click the OKR button
 	public void clickOnOkrButton() {
 		driver.findElement(clickOnOkrButton).click();
 	}

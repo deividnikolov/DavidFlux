@@ -19,39 +19,41 @@ public class DepartmentsPage {
 		this.driver = driver;
 	}
 	
-	// Click the new team button
+	//Click the new team button
 	public void clickOnNewTeamButton() {
 		driver.findElement(newTeamButton).click();
 	}
-	// Set the name for the team
+	//Set the name for the team
 	public void setTheTeamName(String name) {
 		driver.findElement(nameField).sendKeys(name);
 	}
-	// Set the code for the team
+	//Set the code for the team
 	public void setTheTeamCode (String code) {
 		driver.findElement(codeField).sendKeys(code);
 	}
-	// Set the description for the team
+	//Set the description for the team
 	public void setTheTeamDescription(String description) {
 		driver.findElement(descriptionField).sendKeys(description);
 	}
-	// Click the save button
+	//Click the save button
 	public void clickOnTheSaveButton() {
 		driver.findElement(saveButton).click();
 	}
-	// Click the nut icon to access the delete button
+	//Click the nut icon to access the delete button
 	public void clickOnTheNut() {
 		driver.findElement(nutButtonDelete).click();
 	}
-	// Click the delete option
+	//Click the delete option
 	public void deleteTheTaskTeam() {
 		driver.findElement(deleteTheTask).click();		
 	}	
-	// Add the new team
+	//Add the new team
 	public void addTheNewTeam(String name, String code, String description) {
 		this.setTheTeamName(name);
 		this.setTheTeamCode(code);
 		this.setTheTeamDescription(description);
-		this.clickOnTheSaveButton();				    
+		this.clickOnTheSaveButton();	
+		
+		
 	}	
 }

@@ -1,5 +1,4 @@
 package pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,33 +16,34 @@ public class NewDepartmentPage {
 	public NewDepartmentPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	// Click on create new department
+	//Click on create new department
 	public void clickCreateNewDepartment() {
 		driver.findElement(createDepartment).click();
 	}
-	// Set the project name
+	//Set the project name
 	public void setProjectName(String nameInput) {
 		driver.findElement(projectName).sendKeys(nameInput);	
 	}
-	// Set the project code
+	//Set the project code
 	public void setProjectCode(String codeInput) {
 		driver.findElement(projectCode).sendKeys(codeInput);
 	}
-	// Set the project URL
+	//Set the project URL
 	public void setProjectUrl(String urlInput) {
 		driver.findElement(projectUrl).sendKeys(urlInput);
 	}
-	// Set the project description
+	//Set the project description
 	public void setProjectDescription(String descriptionInput) {
 	    driver.findElement(projectDescription).sendKeys(descriptionInput);
 	}
-	// Create the new department for an admin user
+	//Create the new department for an admin user
 	public void createTheNewDepartment(String nameInput,String codeInput,String urlInput,String descriptionInput) {
 		this.setProjectName(nameInput);
 		this.setProjectCode(codeInput);
 		this.setProjectUrl(urlInput);
 		this.setProjectDescription(descriptionInput);
 		
-	}
 		
+		
+	}		
 }

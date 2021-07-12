@@ -17,26 +17,26 @@ public class TaskPage {
 		this.driver = driver;
 	}
 
-    // Set the task title
+     //Set the task title
 	public void setTheTaskTitle(String title) {
 		driver.findElement(titleInput).sendKeys(title);
 	}
 
-	// Set the task description
+	 //Set the task description
 	public void setTheTaskDescription(String taskDes) {
 		driver.findElement(descriptionInput).sendKeys(taskDes);
 	}
 
-	// Click on the create task button
+	 //Click on the create task button
 	public void clickOnTheCreateTaskButton() {
 		driver.findElement(createTaskButton).click();
 	}
-	// Add a comment after the task is created
+	 //Add a comment after the task is created
 	public void addTheComment(String comment) {
 		driver.findElement(addComment).sendKeys(comment);
 	}
 		
-    // Create the task
+     //Create the task
 	public void taskPageCreate(String title, String taskDes) {
 		this.setTheTaskTitle(title);
 		this.setTheTaskDescription(taskDes);

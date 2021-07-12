@@ -16,6 +16,7 @@
        <class name="David.Flux.AddNewTeamDepartmentsTest"/> 
        <class name="David.Flux.DeleteNewTeamDepartmentsTest"/> 
        <class name="David.Flux.CreateNewOkrTest"/> 
+       <class name="David.Flux.CreateDepartmentTest"/> 
       
     </classes>
   </test> <!-- FunctionalTesting -->

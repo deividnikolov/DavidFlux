@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeSuite;
 import pages.DepartmentsPage;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.NewDepartmentPage;
 import pages.ObjectivesKeyResultPage;
 import pages.TaskPage;
 import pages.TeamsPage;
@@ -22,6 +23,7 @@ public class Browser {
 	static TaskPage task;
 	static HomePage home;
 	static ObjectivesKeyResultPage okr;
+	static NewDepartmentPage newDept;
 	static String loginUrl = "https://app.fluxday.io/users/sign_in";
 	String driverPath = "C:\\Users\\User\\Desktop\\Java\\DavidFlux\\driver\\chromedriver.exe";
 
@@ -35,6 +37,7 @@ public class Browser {
 		task = new TaskPage(driver);
 		home = new HomePage(driver);
 		okr = new ObjectivesKeyResultPage(driver);
+		newDept = new NewDepartmentPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(loginUrl);
