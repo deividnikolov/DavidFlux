@@ -1,2 +1,2 @@
-# DavidFlux
-Software Academy end project using Selenium WebDriver
+# #️⃣ FluxDay Project
+Software Academy project using selenium-java
