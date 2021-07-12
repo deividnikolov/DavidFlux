@@ -35,7 +35,7 @@ public class NewDepartmentPage {
 	}
 	// Set the project description
 	public void setProjectDescription(String descriptionInput) {
-		driver.findElement(projectDescription).sendKeys(descriptionInput);
+	    driver.findElement(projectDescription).sendKeys(descriptionInput);
 	}
 	// Create the new department for an admin user
 	public void createTheNewDepartment(String nameInput,String codeInput,String urlInput,String descriptionInput) {
