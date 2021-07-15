@@ -1,3 +1,3 @@
-# #️⃣ FluxDay Project
-:bell: Software academy project using Selenium-Java.
+# :red_circle: FluxDay Project
+:bell: Software academy end project using Selenium-Java.
 
