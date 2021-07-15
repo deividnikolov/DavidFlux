@@ -1,2 +1,3 @@
 # #️⃣ FluxDay Project
-Software Academy project using selenium-java
+:bell: Software academy project using Selenium-Java.
+
