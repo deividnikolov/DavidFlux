@@ -24,7 +24,7 @@ public class AddTaskAsAdminTest extends Browser {
 		
 	     WebDriverWait wait = new WebDriverWait(driver,10);
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
-				 (By.xpath("//div[@class='small-12 columns form-action-up']"))).isDisplayed();
+		(By.xpath("//div[@class='small-12 columns form-action-up']"))).isDisplayed();
 		Assert.assertTrue(isDisplayed);
 		
 		Browser.home.clickOnLogoutButton();

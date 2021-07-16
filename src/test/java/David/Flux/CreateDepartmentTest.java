@@ -25,14 +25,14 @@ public class CreateDepartmentTest extends Browser {
 	private String actualMessage = "Project was successfully created.";
 
 	@Test(priority = 0)
-	public void createNewDepartment() {
+	public void createNewDepartment() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnDepartmentsButton();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated
-		(By.linkText("Create department"))).isDisplayed();
+		(By.linkText("Create department"))).click();
 
-		Browser.newDept.clickCreateNewDepartment();
 		Browser.newDept.createTheNewDepartment("Quality Assurance", "Code", "http://www.test1.org", "QA");
 
 		WebElement dropdown = driver.findElement(By.cssSelector("option[value = '4']"));

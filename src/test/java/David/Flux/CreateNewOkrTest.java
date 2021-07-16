@@ -32,9 +32,9 @@ public class CreateNewOkrTest extends Browser {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//input[@class='button alert right']"))).isDisplayed();
-				
+		
 		Browser.okr.clickOnTheSaveButton();
-
+				
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 		Browser.home.clickOnLogoutButton();
 

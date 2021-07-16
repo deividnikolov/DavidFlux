@@ -1,11 +1,9 @@
 package David.Flux;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 import pages.DepartmentsPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -28,8 +26,9 @@ public class Browser {
 	String driverPath = "C:\\Users\\User\\Desktop\\Java\\DavidFlux\\driver\\chromedriver.exe";
 
 	@BeforeSuite
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", driverPath);
+	public void setUp() 
+	{
+		System.setProperty("webdriver.chrome.driver",driverPath );
 		driver = new ChromeDriver();
 		login = new LoginPage(driver);
 		team = new TeamsPage(driver);

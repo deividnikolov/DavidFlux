@@ -10,8 +10,8 @@ public class AddNewTeamDepartmentsTest extends Browser {
 	/*
 	 * Login to FluxDay as an admin
 	 * Wait until the "Departments" button is ready to be clicked
-	 * Click on the "Departments" button
-	 * Click on the "New" team button
+	 * Click the "Departments" button
+	 * Click the "New" team button
 	 * Add the name, the code and the description and click "Save"
 	 * Assert that the expected message is correct
 	 * Click logout	
@@ -24,10 +24,9 @@ public class AddNewTeamDepartmentsTest extends Browser {
 	public void addNewTeamInDepartments() {	
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		 wait.until(ExpectedConditions.elementToBeClickable
-	   (By.linkText("Departments"))).isDisplayed();
+		wait.until(ExpectedConditions.elementToBeClickable
+	    (By.linkText("Departments"))).click();;
 		
-		Browser.home.clickOnDepartmentsButton();
 		Browser.departments.clickOnNewTeamButton();
 		
 		Browser.departments.addTheNewTeam("Name","Code","Description");

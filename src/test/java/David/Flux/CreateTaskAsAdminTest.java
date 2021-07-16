@@ -12,7 +12,7 @@ public class CreateTaskAsAdminTest extends Browser {
 	/*
 	 * Login to FluxDay as an admin
 	 * Click the "Team" button
-	 * Wait until the "Task" page is displayed
+	 * Wait until the "Task" page is located
 	 * Click on the add task button
 	 * Create the task by adding the title and description
 	 * Select the "Testing" team from the drop down menu
