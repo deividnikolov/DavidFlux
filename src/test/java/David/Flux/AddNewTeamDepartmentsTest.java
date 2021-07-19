@@ -21,7 +21,8 @@ public class AddNewTeamDepartmentsTest extends Browser {
 	private String actualMessage = "Team was successfully created.";
 
 	@Test(priority = 0)
-	public void addNewTeamInDepartments() {	
+	public void addNewTeamInDepartments() 
+	{	
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.elementToBeClickable

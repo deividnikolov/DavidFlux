@@ -12,7 +12,8 @@ public class LoginTeamLeadTest extends Browser {
 	 **/	
 	
 	@Test(priority = 0)
-	public void loginAsTeamLead() {
+	public void loginAsTeamLead() 
+	{
 		Browser.login.loginToFluxDay("lead@fluxday.io", "password");
 		Assert.assertTrue(driver.findElement(By.linkText("Team Lead")).getText()
 				.contains("Team Lead"));

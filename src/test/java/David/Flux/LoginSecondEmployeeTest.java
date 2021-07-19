@@ -12,7 +12,8 @@ public class LoginSecondEmployeeTest extends Browser {
 	 **/	
 	
 	@Test(priority = 0)
-	public void loginAsSecondEmployee() {
+	public void loginAsSecondEmployee() 
+	{
 		Browser.login.loginToFluxDay("emp2@fluxday.io", "password");
 		Assert.assertTrue(driver.findElement(By.linkText("Employee 2")).getText()
 				.contains("Employee 2"));

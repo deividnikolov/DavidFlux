@@ -14,7 +14,8 @@ public class LoginAdminNegativeTest extends Browser {
 	private String actualMessage = "Invalid email or password.";
 
 	@Test(priority = 0)
-	public void unsuccessfulLoginAsAnAdmin() {
+	public void unsuccessfulLoginAsAnAdmin() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "passwordd");
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 		Browser.login.clearTextField();

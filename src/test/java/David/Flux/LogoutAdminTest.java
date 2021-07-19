@@ -15,7 +15,8 @@ public class LogoutAdminTest extends Browser {
 	 **/	
 	
 	@Test(priority = 0)
-	public void logoutAsAnAdmin() {
+	public void logoutAsAnAdmin() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnLogoutButton();
 		
@@ -23,8 +24,7 @@ public class LogoutAdminTest extends Browser {
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 				(By.xpath("//div[@class='app-logo-login']"))).isDisplayed();
 		 Assert.assertTrue(isDisplayed);
-				
-		
+					
 	}
 
 }

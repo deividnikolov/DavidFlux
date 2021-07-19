@@ -22,7 +22,8 @@ public class CreateNewOkrTest extends Browser {
 	private String actualMessage = "Okr was successfully created.";
 
 	@Test(priority = 0)
-	public void createTheNewOkrForAnAdminUser() {
+	public void createTheNewOkrForAnAdminUser() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnOkrButton();
 			

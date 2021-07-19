@@ -21,7 +21,8 @@ public class DeleteNewTeamDepartmentsTest extends Browser {
 	 **/		
 	
 	@Test(priority = 0)
-	public void deleteTheNewTeamInDepartments() {
+	public void deleteTheNewTeamInDepartments() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnDepartmentsButton();
 		

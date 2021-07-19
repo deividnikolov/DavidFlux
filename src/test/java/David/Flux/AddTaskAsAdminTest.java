@@ -17,7 +17,8 @@ public class AddTaskAsAdminTest extends Browser {
 	 **/	
 	
 	@Test(priority = 0)
-	public void addATaskAsAnAdmin() {
+	public void addATaskAsAnAdmin() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnTeamButton();
 		Browser.team.clickOnAddTaskButton();	

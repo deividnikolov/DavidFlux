@@ -26,7 +26,8 @@ public class CreateTaskAsAdminTest extends Browser {
 	private String actualMessage = "Task was successfully created.";
 	
 	@Test(priority = 0)
-	public void createTaskAsAnAdmin() {
+	public void createTaskAsAnAdmin() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.home.clickOnTeamButton();
 		

@@ -12,7 +12,8 @@ public class LoginAdminTest extends Browser {
 	 **/	
 	
 	@Test(priority = 0)
-	public void loginAsAnAdmin() {
+	public void loginAsAnAdmin() 
+	{
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		Assert.assertTrue(driver.findElement(By.linkText("Admin User")).getText()
 				.contains("Admin User"));
