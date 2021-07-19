@@ -25,7 +25,7 @@ public class AddNewTeamDepartmentsTest extends Browser {
 		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.elementToBeClickable
-	    (By.linkText("Departments"))).click();;
+	    (By.linkText("Departments"))).click();
 		
 		Browser.departments.clickOnNewTeamButton();
 		
