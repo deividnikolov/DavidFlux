@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 public class LoginTeamLeadTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as the team lead
 	 * Assert that you're logged in as the team lead
 	 * Click logout
-	 **/	
+	 */	
 	
 	@Test(priority = 0)
 	public void loginAsTeamLead() 

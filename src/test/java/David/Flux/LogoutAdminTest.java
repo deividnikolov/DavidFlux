@@ -7,12 +7,12 @@ import org.testng.annotations.Test;
 
 public class LogoutAdminTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as an admin
 	 * Click logout
 	 * Wait until the "Login" page is displayed
 	 * Assert that the "Login" page is displayed
-	 **/	
+	 */	
 	
 	@Test(priority = 0)
 	public void logoutAsAnAdmin() 

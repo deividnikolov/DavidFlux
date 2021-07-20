@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class CreateTaskAsAdminTest extends Browser {
 	
-	/*
+	/**
 	 * Login to FluxDay as an admin
 	 * Click the "Team" button
 	 * Wait until the "Task" page is located
@@ -20,7 +20,7 @@ public class CreateTaskAsAdminTest extends Browser {
 	 * Assert that the expected message is correct
 	 * Add a comment and press the enter key
 	 * Click logout
-	 **/		
+	 */		
 			
 	private String expectedMessage = "Task was successfully created.";			
 	private String actualMessage = "Task was successfully created.";

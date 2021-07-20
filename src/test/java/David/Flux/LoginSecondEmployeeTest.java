@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 public class LoginSecondEmployeeTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as the second employee
 	 * Assert that you're logged in as the second employee
 	 * Click logout
-	 **/	
+	 */	
 	
 	@Test(priority = 0)
 	public void loginAsSecondEmployee() 

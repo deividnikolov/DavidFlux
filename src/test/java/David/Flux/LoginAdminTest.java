@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 public class LoginAdminTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as an admin
 	 * Assert that you're logged in as an admin
 	 * Click logout
-	 **/	
+	 */	
 	
 	@Test(priority = 0)
 	public void loginAsAnAdmin() 

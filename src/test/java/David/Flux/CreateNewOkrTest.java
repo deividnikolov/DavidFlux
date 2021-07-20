@@ -1,5 +1,4 @@
 package David.Flux;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class CreateNewOkrTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as an admin 
 	 * Click the "OKR" button 
 	 * Click the "New OKR" button
@@ -17,7 +16,7 @@ public class CreateNewOkrTest extends Browser {
 	 * Click the save button
 	 * Assert that the "OKR" is created
 	 * Click logout
-	 **/
+	 */
 	private String expectedMessage = "Okr was successfully created.";
 	private String actualMessage = "Okr was successfully created.";
 

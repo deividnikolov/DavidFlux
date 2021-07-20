@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class DeleteNewTeamDepartmentsTest extends Browser {
 
-	/*
+	/**
 	 * Login to FluxDay as an admin
 	 * Click the "Departments" button
 	 * Click the "New" team button
@@ -18,7 +18,7 @@ public class DeleteNewTeamDepartmentsTest extends Browser {
 	 * Wait until the "Teams" page is displayed
 	 * Assert that is displayed
 	 * Click logout 
-	 **/		
+	 */		
 	
 	@Test(priority = 0)
 	public void deleteTheNewTeamInDepartments() 
