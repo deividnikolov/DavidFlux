@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="David.Flux.CreateDepartmentTest">
+      <class name="David.Flux.AddNewTeamDepartmentsTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="add_New_Team_In_Departments"/>
           <include name="setUp"/>
-          <include name="createNewDepartment"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- David.Flux.CreateDepartmentTest -->
+      </class> <!-- David.Flux.AddNewTeamDepartmentsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

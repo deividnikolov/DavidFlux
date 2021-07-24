@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 // This class represents a class object linked to https://app.fluxday.io/users/sign_in
 
 public class LoginPage {
+	
 	private WebDriver driver;
 	private By email = By.xpath("//input[@id='user_email']");
 	private By password = By.id("user_password");

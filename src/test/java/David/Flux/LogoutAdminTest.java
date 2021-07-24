@@ -5,7 +5,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LogoutAdminTest extends Browser {
+import pages.Browser;
+
+public class LogoutAdminTest extends Initializer {
 
 	/**
 	 * Login to FluxDay as an admin
@@ -14,13 +16,13 @@ public class LogoutAdminTest extends Browser {
 	 * Assert that the "Login" page is displayed
 	 */	
 	
-	@Test(priority = 0)
-	public void logoutAsAnAdmin() 
+	@Test
+	public void logout_As_An_Admin() 
 	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Browser.instance().homePage.clickOnLogoutButton();
 		
-		 WebDriverWait wait = new WebDriverWait(driver, 10);
+		 WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 				(By.xpath("//div[@class='app-logo-login']"))).isDisplayed();
 		 Assert.assertTrue(isDisplayed);

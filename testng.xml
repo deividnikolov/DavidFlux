@@ -4,7 +4,7 @@
  verbose = "1" preserve-order="true" > 
   <test name="Flux Day">
     <classes>
-       <class name="David.Flux.Browser"/>   
+       <class name="David.Flux.Initializer"/>   
        <class name="David.Flux.LoginFirstEmployeeTest"/> 
        <class name="David.Flux.LoginSecondEmployeeTest"/> 
        <class name="David.Flux.LoginAdminTest"/>

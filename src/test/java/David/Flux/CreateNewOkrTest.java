@@ -5,7 +5,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CreateNewOkrTest extends Browser {
+import pages.Browser;
+
+public class CreateNewOkrTest extends Initializer {
 
 	/**
 	 * Login to FluxDay as an admin 
@@ -20,23 +22,23 @@ public class CreateNewOkrTest extends Browser {
 	private String expectedMessage = "Okr was successfully created.";
 	private String actualMessage = "Okr was successfully created.";
 
-	@Test(priority = 0)
-	public void createTheNewOkrForAnAdminUser() 
-	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Browser.home.clickOnOkrButton();
+	@Test
+	public void create_The_New_Okr_For_An_Admin_User() 
+	{   
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Browser.instance().homePage.clickOnOkrButton();
 			
-		Browser.okr.clickOnNewOkrButton();
-		Browser.okr.setTheOkrForTheAdminUser("Name", "Objective", "FirstKey", "SecondKey");
+		Browser.instance().okrPage.clickOnNewOkrButton();
+		Browser.instance().okrPage.setTheOkrForTheAdminUser("Name", "Objective", "FirstKey", "SecondKey");
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//input[@class='button alert right']"))).isDisplayed();
 		
-		Browser.okr.clickOnTheSaveButton();
+		Browser.instance().okrPage.clickOnTheSaveButton();
 				
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().homePage.clickOnLogoutButton();
 
 	}
 }

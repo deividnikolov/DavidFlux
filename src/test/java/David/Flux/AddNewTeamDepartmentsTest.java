@@ -5,9 +5,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AddNewTeamDepartmentsTest extends Browser {
+import pages.Browser;
+
+public class AddNewTeamDepartmentsTest extends Initializer {
 	
-	/*
+	/**
 	 * Login to FluxDay as an admin
 	 * Wait until the "Departments" button is ready to be clicked
 	 * Click the "Departments" button
@@ -15,24 +17,24 @@ public class AddNewTeamDepartmentsTest extends Browser {
 	 * Add the name, the code and the description and click "Save"
 	 * Assert that the expected message is correct
 	 * Click logout	
-	 **/		
+	 */		
 	
 	private String expectedMessage = "Team was successfully created.";
 	private String actualMessage = "Team was successfully created.";
 
-	@Test(priority = 0)
-	public void addNewTeamInDepartments() 
+	@Test
+	public void add_New_Team_In_Departments() 
 	{	
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
 		wait.until(ExpectedConditions.elementToBeClickable
 	    (By.linkText("Departments"))).click();
 		
-		Browser.departments.clickOnNewTeamButton();
+		Browser.instance().departmentsPage.clickOnNewTeamButton();
 		
-		Browser.departments.addTheNewTeam("Name","Code","Description");
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().departmentsPage.addTheNewTeam("Name","Code","Description");
+		Assert.assertTrue(expectedMessage .equals(actualMessage));
+		Browser.instance().homePage.clickOnLogoutButton();
 	}
 		
 }

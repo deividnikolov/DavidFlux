@@ -5,7 +5,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DeleteNewTeamDepartmentsTest extends Browser {
+import pages.Browser;
+
+public class DeleteNewTeamDepartmentsTest extends Initializer{
 
 	/**
 	 * Login to FluxDay as an admin
@@ -20,23 +22,23 @@ public class DeleteNewTeamDepartmentsTest extends Browser {
 	 * Click logout 
 	 */		
 	
-	@Test(priority = 0)
-	public void deleteTheNewTeamInDepartments() 
+	@Test
+	public void delete_The_New_Team_In_Departments() 
 	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Browser.home.clickOnDepartmentsButton();
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Browser.instance().homePage.clickOnDepartmentsButton();
 		
-		Browser.departments.clickOnNewTeamButton();
-		Browser.departments.addTheNewTeam("Name", "Code", "Description");
+		Browser.instance().departmentsPage.clickOnNewTeamButton();
+		Browser.instance().departmentsPage.addTheNewTeam("Name", "Code", "Description");
 		
-		Browser.departments.clickOnTheNut();
-		Browser.departments.deleteTheTaskTeam();	
-		driver.switchTo().alert().accept();
+		Browser.instance().departmentsPage.clickOnTheNut();
+		Browser.instance().departmentsPage.deleteTheTaskTeam();	
+		Browser.instance().driver.switchTo().alert().accept();
 		
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 		       (By.xpath("//div[@class='pane2-meta']"))).isDisplayed();
 		 Assert.assertTrue(isDisplayed);		
-		 Browser.home.clickOnLogoutButton();
+		 Browser.instance().homePage.clickOnLogoutButton();
 	}
 }

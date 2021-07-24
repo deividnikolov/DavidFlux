@@ -3,7 +3,9 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginAdminTest extends Browser {
+import pages.Browser;
+
+public class LoginAdminTest extends Initializer{
 
 	/**
 	 * Login to FluxDay as an admin
@@ -11,13 +13,13 @@ public class LoginAdminTest extends Browser {
 	 * Click logout
 	 */	
 	
-	@Test(priority = 0)
-	public void loginAsAnAdmin() 
+	@Test
+	public void login_As_An_Admin() 
 	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Assert.assertTrue(driver.findElement(By.linkText("Admin User")).getText()
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Admin User")).getText()
 				.contains("Admin User"));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().homePage.clickOnLogoutButton();
 		
 	}
 }

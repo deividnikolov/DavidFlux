@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CreateTaskAsAdminTest extends Browser {
+import pages.Browser;
+
+public class CreateTaskAsAdminTest extends Initializer{
 	
 	/**
 	 * Login to FluxDay as an admin
@@ -25,28 +27,28 @@ public class CreateTaskAsAdminTest extends Browser {
 	private String expectedMessage = "Task was successfully created.";			
 	private String actualMessage = "Task was successfully created.";
 	
-	@Test(priority = 0)
-	public void createTaskAsAnAdmin() 
+	@Test
+	public void create_Task_As_An_Admin() 
 	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Browser.home.clickOnTeamButton();
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Browser.instance().homePage.clickOnTeamButton();
 		
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//a[@href='/tasks/new?team_id=11']"))).isDisplayed();
 		
-		Browser.team.clickOnAddTaskButton();
-		Browser.task.taskPageCreate("Title","Description");
+		Browser.instance().teamPage.clickOnAddTaskButton();
+		Browser.instance().taskPage.taskPageCreate("Title","Description");
 		
-		WebElement option = driver.findElement(By.cssSelector("option[value='2']"));
+		WebElement option = Browser.instance().driver.findElement(By.cssSelector("option[value='2']"));
 		option.click();
 		
-		Browser.task.clickOnTheCreateTaskButton();
+		Browser.instance().taskPage.clickOnTheCreateTaskButton();
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 		
-		Browser.task.addTheComment("Comment");
-		driver.findElement(By.id("comment_body")).sendKeys(Keys.RETURN);
-		Browser.home.clickOnLogoutButton();		
+		Browser.instance().taskPage.addTheComment("Comment");
+		Browser.instance().driver.findElement(By.id("comment_body")).sendKeys(Keys.RETURN);
+		Browser.instance().homePage.clickOnLogoutButton();		
 		
 	}
 }

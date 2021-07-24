@@ -3,7 +3,9 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTeamLeadTest extends Browser {
+import pages.Browser;
+
+public class LoginTeamLeadTest extends Initializer {
 
 	/**
 	 * Login to FluxDay as the team lead
@@ -11,13 +13,13 @@ public class LoginTeamLeadTest extends Browser {
 	 * Click logout
 	 */	
 	
-	@Test(priority = 0)
-	public void loginAsTeamLead() 
+	@Test
+	public void login_As_Team_Lead() 
 	{
-		Browser.login.loginToFluxDay("lead@fluxday.io", "password");
-		Assert.assertTrue(driver.findElement(By.linkText("Team Lead")).getText()
+		Browser.instance().loginPage.loginToFluxDay("lead@fluxday.io", "password");
+		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Team Lead")).getText()
 				.contains("Team Lead"));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().homePage.clickOnLogoutButton();
 	}
 
 }

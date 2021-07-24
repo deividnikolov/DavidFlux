@@ -3,7 +3,9 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginFirstEmployeeTest extends Browser {
+import pages.Browser;
+
+public class LoginFirstEmployeeTest extends Initializer{
  
 	/**
 	 * Login to FluxDay as the first employee
@@ -11,13 +13,13 @@ public class LoginFirstEmployeeTest extends Browser {
 	 * Click logout
 	 */	
 	
-	@Test(priority = 0)
-	public void loginAsFirstEmployee() 
+	@Test
+	public void login_As_First_Employee() 
 	{
-		Browser.login.loginToFluxDay("emp1@fluxday.io", "password");		
-		Assert.assertTrue(driver.findElement(By.linkText("Employee 1")).getText()
+		Browser.instance().loginPage.loginToFluxDay("emp1@fluxday.io", "password");		
+		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Employee 1")).getText()
 				.contains("Employee 1"));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().homePage.clickOnLogoutButton();
 		
 	}
 }

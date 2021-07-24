@@ -6,7 +6,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CreateDepartmentTest extends Browser {
+import pages.Browser;
+
+public class CreateDepartmentTest extends Initializer{
 
 	/**
 	 * Login to FluxDay as an admin
@@ -23,22 +25,23 @@ public class CreateDepartmentTest extends Browser {
 	private String expectedMessage = "Project was successfully created.";
 	private String actualMessage = "Project was successfully created.";
 
-	@Test(priority = 0)
-	public void createNewDepartment() 
+	@Test
+	public void create_New_Department() 
 	{
-		Browser.login.loginToFluxDay("admin@fluxday.io", "password");
-		Browser.home.clickOnDepartmentsButton();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
+		Browser.instance().homePage.clickOnDepartmentsButton();
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		 (By.linkText("Create department"))).click();
 
-		Browser.newDept.createTheNewDepartment("Quality Assurance", "Code", "http://www.test1.org", "QA");
+		Browser.instance().newDeptPage.createTheNewDepartment
+		("Quality Assurance", "Code", "http://www.test1.org", "QA");
 
-		WebElement dropdown = driver.findElement(By.cssSelector("option[value = '4']"));
+		WebElement dropdown = Browser.instance().driver.findElement(By.cssSelector("option[value = '4']"));
 		dropdown.click();
-		Browser.departments.clickOnTheSaveButton();
+		Browser.instance().departmentsPage.clickOnTheSaveButton();
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
-		Browser.home.clickOnLogoutButton();
+		Browser.instance().homePage.clickOnLogoutButton();
 
 	}
 }
