@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
-public class LoginAdminNegativeTest extends Initializer {
+public class UnsuccessfulLoginTest extends Initializer {
 
 	/**
 	 * Login to FluxDay with wrong password
@@ -16,7 +16,7 @@ public class LoginAdminNegativeTest extends Initializer {
 	private String actualMessage = "Invalid email or password.";
 
 	@Test
-	public void login_With_Wrong_Credentials() 
+	public void should_Not_Login_With_Wrong_Credentials() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "passwordd");
 		Assert.assertTrue(expectedMessage.equals(actualMessage));

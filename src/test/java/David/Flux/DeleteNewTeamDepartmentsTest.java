@@ -23,7 +23,7 @@ public class DeleteNewTeamDepartmentsTest extends Initializer{
 	 */		
 	
 	@Test
-	public void delete_The_New_Team_In_Departments() 
+	public void should_Delete_The_New_Team_In_Departments() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnDepartmentsButton();

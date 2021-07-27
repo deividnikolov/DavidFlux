@@ -17,7 +17,7 @@ public class LogoutAdminTest extends Initializer {
 	 */	
 	
 	@Test
-	public void logout_As_An_Admin() 
+	public void should_Logout_As_An_Admin() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnLogoutButton();

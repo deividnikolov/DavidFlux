@@ -14,7 +14,7 @@ public class LoginAdminTest extends Initializer{
 	 */	
 	
 	@Test
-	public void login_As_An_Admin() 
+	public void should_Login_As_An_Admin() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Admin User")).getText()

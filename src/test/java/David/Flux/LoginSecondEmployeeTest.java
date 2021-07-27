@@ -14,7 +14,7 @@ public class LoginSecondEmployeeTest extends Initializer{
 	 */	
 	
 	@Test
-	public void login_As_Second_Employee() 
+	public void should_Login_As_Second_Employee() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("emp2@fluxday.io", "password");
 		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Employee 2")).getText()

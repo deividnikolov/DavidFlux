@@ -23,7 +23,7 @@ public class CreateNewOkrTest extends Initializer {
 	private String actualMessage = "Okr was successfully created.";
 
 	@Test
-	public void create_The_New_Okr_For_An_Admin_User() 
+	public void should_Create_The_New_Okr_For_An_Admin_User() 
 	{   
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnOkrButton();

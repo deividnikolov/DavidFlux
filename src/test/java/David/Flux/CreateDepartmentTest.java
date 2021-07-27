@@ -26,7 +26,7 @@ public class CreateDepartmentTest extends Initializer{
 	private String actualMessage = "Project was successfully created.";
 
 	@Test
-	public void create_New_Department() 
+	public void should_Create_New_Department() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnDepartmentsButton();

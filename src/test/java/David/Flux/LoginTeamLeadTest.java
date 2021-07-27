@@ -14,7 +14,7 @@ public class LoginTeamLeadTest extends Initializer {
 	 */	
 	
 	@Test
-	public void login_As_Team_Lead() 
+	public void should_Login_As_Team_Lead() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("lead@fluxday.io", "password");
 		Assert.assertTrue(Browser.instance().driver.findElement(By.linkText("Team Lead")).getText()

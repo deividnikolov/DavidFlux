@@ -11,7 +11,7 @@
        <class name="David.Flux.AddTaskAsAdminTest"/> 
        <class name="David.Flux.CreateTaskAsAdminTest"/> 
        <class name="David.Flux.LogoutAdminTest"/>
-       <class name="David.Flux.LoginAdminNegativeTest"/> 
+       <class name="David.Flux.UnsuccessfulLoginTest"/> 
        <class name="David.Flux.LoginTeamLeadTest"/>
        <class name="David.Flux.AddNewTeamDepartmentsTest"/> 
        <class name="David.Flux.DeleteNewTeamDepartmentsTest"/> 

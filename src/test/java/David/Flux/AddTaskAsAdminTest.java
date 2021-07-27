@@ -19,7 +19,7 @@ public class AddTaskAsAdminTest extends Initializer {
 	 */	
 	
 	@Test
-	public void add_Task_As_An_Admin() 
+	public void should_Add_Task_As_An_Admin() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnTeamButton();
