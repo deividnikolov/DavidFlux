@@ -11,10 +11,13 @@ import pages.Browser;
 public class AddNewTeamDepartmentsTest extends Initializer {
 
 	/**
-	 * Login to FluxDay as an admin Wait until the "Departments" button is ready to
-	 * be clicked Click the "Departments" button Click the "New" team button Add the
-	 * name, the code and the description and click "Save" Assert that the expected
-	 * message is correct Click logout
+	 * Login to FluxDay as an admin
+	 *  Wait until the "Departments" button is ready to be clicked
+	 *  Click the "Departments" button 
+	 *  Click the "New" team button 
+	 *  Add the name, the code and the description and click "Save" 
+     *  Assert that the expected message is correct 
+	 *  Click logout
 	 */
 
 	private String expectedMessage = "Team was successfully created.";
