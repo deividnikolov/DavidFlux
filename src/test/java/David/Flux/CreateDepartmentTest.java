@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class CreateDepartmentTest extends Initializer{
 
 	/**
@@ -30,7 +32,7 @@ public class CreateDepartmentTest extends Initializer{
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnDepartmentsButton();
-		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		 (By.linkText("Create department"))).click();
 
@@ -40,7 +42,7 @@ public class CreateDepartmentTest extends Initializer{
 		WebElement dropdown = Browser.instance().driver.findElement(By.cssSelector("option[value = '4']"));
 		dropdown.click();
 		Browser.instance().departmentsPage.clickOnTheSaveButton();
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
+		Assert.assertEquals(actualMessage, expectedMessage);
 		Browser.instance().homePage.clickOnLogoutButton();
 
 	}

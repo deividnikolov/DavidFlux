@@ -13,7 +13,7 @@ public class LoginFirstEmployeeTest extends Initializer{
 	 * Click logout
 	 */	
 	
-	@Test
+	@Test(priority = 0)
 	public void should_Login_As_First_Employee() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("emp1@fluxday.io", "password");		

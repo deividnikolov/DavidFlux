@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class CreateNewOkrTest extends Initializer {
 
 	/**
@@ -31,13 +33,13 @@ public class CreateNewOkrTest extends Initializer {
 		Browser.instance().okrPage.clickOnNewOkrButton();
 		Browser.instance().okrPage.setTheOkrForTheAdminUser("Name", "Objective", "FirstKey", "SecondKey");
 
-		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//input[@class='button alert right']"))).isDisplayed();
 		
 		Browser.instance().okrPage.clickOnTheSaveButton();
-				
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
+
+		Assert.assertEquals(actualMessage, expectedMessage);
 		Browser.instance().homePage.clickOnLogoutButton();
 
 	}

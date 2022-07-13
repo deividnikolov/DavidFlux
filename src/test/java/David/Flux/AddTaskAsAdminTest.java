@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class AddTaskAsAdminTest extends Initializer {
 	
 	/**
@@ -24,8 +26,8 @@ public class AddTaskAsAdminTest extends Initializer {
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnTeamButton();
 		Browser.instance().teamPage.clickOnAddTaskButton();	
-		
-	     WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
+
+	     WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//div[@class='small-12 columns form-action-up']"))).isDisplayed();
 		Assert.assertTrue(isDisplayed);

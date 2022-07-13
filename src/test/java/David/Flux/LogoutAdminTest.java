@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class LogoutAdminTest extends Initializer {
 
 	/**
@@ -22,7 +24,7 @@ public class LogoutAdminTest extends Initializer {
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnLogoutButton();
 		
-		 WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
+		 WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 				(By.xpath("//div[@class='app-logo-login']"))).isDisplayed();
 		 Assert.assertTrue(isDisplayed);

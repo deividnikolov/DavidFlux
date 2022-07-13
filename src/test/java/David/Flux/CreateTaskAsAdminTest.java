@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class CreateTaskAsAdminTest extends Initializer{
 	
 	/**
@@ -33,7 +35,7 @@ public class CreateTaskAsAdminTest extends Initializer{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
 		Browser.instance().homePage.clickOnTeamButton();
 		
-		WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.presenceOfElementLocated
 		(By.xpath("//a[@href='/tasks/new?team_id=11']"))).isDisplayed();
 		
@@ -44,7 +46,7 @@ public class CreateTaskAsAdminTest extends Initializer{
 		option.click();
 		
 		Browser.instance().taskPage.clickOnTheCreateTaskButton();
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
+		Assert.assertEquals(actualMessage, expectedMessage);
 		
 		Browser.instance().taskPage.addTheComment("Comment");
 		Browser.instance().driver.findElement(By.id("comment_body")).sendKeys(Keys.RETURN);

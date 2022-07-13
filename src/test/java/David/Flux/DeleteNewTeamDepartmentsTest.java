@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
 public class DeleteNewTeamDepartmentsTest extends Initializer{
 
 	/**
@@ -35,7 +37,7 @@ public class DeleteNewTeamDepartmentsTest extends Initializer{
 		Browser.instance().departmentsPage.deleteTheTaskTeam();	
 		Browser.instance().driver.switchTo().alert().accept();
 		
-		WebDriverWait wait = new WebDriverWait(Browser.instance().driver,10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		 boolean isDisplayed = wait.until(ExpectedConditions.presenceOfElementLocated
 		       (By.xpath("//div[@class='pane2-meta']"))).isDisplayed();
 		 Assert.assertTrue(isDisplayed);		

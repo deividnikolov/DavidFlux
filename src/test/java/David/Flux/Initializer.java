@@ -1,4 +1,5 @@
 package David.Flux;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -17,7 +18,7 @@ public class Initializer {
 	{
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		Browser.instance().driver.manage().window().maximize();
-		Browser.instance().driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Browser.instance().driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Browser.instance().driver.get(loginUrl);
 	}
 

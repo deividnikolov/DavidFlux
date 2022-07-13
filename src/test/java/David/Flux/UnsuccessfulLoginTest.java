@@ -9,7 +9,7 @@ public class UnsuccessfulLoginTest extends Initializer {
 	/**
 	 * Login to FluxDay with wrong password
 	 * Assert that you get the message : "Invalid email or password"
-	 * Clear the user name text field
+	 * Clear the username text field
 	 */		
 	
 	private String expectedMessage = "Invalid email or password.";
@@ -19,7 +19,7 @@ public class UnsuccessfulLoginTest extends Initializer {
 	public void should_Not_Login_With_Wrong_Credentials() 
 	{
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "passwordd");
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
+		Assert.assertEquals(actualMessage, expectedMessage);
 		Browser.instance().loginPage.clearTextField();
 
 	}

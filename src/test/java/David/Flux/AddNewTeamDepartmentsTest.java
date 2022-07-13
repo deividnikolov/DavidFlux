@@ -8,6 +8,11 @@ import org.testng.annotations.Test;
 
 import pages.Browser;
 
+import java.time.Duration;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 public class AddNewTeamDepartmentsTest extends Initializer {
 
 	/**
@@ -26,13 +31,13 @@ public class AddNewTeamDepartmentsTest extends Initializer {
 	@Test
 	public void should_Add_New_Team_In_Departments() {
 		Browser.instance().loginPage.loginToFluxDay("admin@fluxday.io", "password");
-		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, 10);
+		WebDriverWait wait = new WebDriverWait(Browser.instance().driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Departments"))).click();
 
 		Browser.instance().departmentsPage.clickOnNewTeamButton();
 
 		Browser.instance().departmentsPage.addTheNewTeam("Name", "Code", "Description");
-		Assert.assertTrue(expectedMessage.equals(actualMessage));
+		assertEquals(actualMessage, expectedMessage);
 		Browser.instance().homePage.clickOnLogoutButton();
 	}
 
