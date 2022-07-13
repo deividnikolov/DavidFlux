@@ -1,1 +1,4 @@
 test-output/
+out/
+.idea/
+.idea_modules/
